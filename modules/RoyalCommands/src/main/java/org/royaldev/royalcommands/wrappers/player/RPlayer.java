@@ -135,6 +135,10 @@ public class RPlayer {
         return homes;
     }
 
+    public KickManager getKickManager() {
+        return new KickManager(this.getUUID());
+    }
+
     public String getName() {
         return this.getOfflinePlayer().getName();
     }
