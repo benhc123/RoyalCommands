@@ -119,7 +119,7 @@ public class Config {
     public static String bcastFormat;
     public static String defaultWarn;
     public static String igBanFormat;
-    public static String igKickFormat;
+    public static String inGameKickFormat;
     public static String igTempbanFormat;
     public static String igUnbanFormat;
     public static String ipBanFormat;
@@ -272,7 +272,7 @@ public class Config {
         bcastFormat = RUtils.colorize(c.getString("messages.bcast_format", "&b[&aBroadcast&b]&a "));
         defaultWarn = RUtils.colorize(c.getString("warns.default_message", "You have been warned."));
         igBanFormat = c.getString("bans.permanent.messages.ingame_format", "&7{kdispname}&c was banned by &7{dispname}&c for &7{reason}&c.");
-        igKickFormat = c.getString("kicks.messages.ingame_format", "&7{kdispname}&c was kicked by &7{dispname}&c for &7{reason}&c.");
+        inGameKickFormat = c.getString("kicks.messages.ingame_format", "&7{kdispname}&c was kicked by &7{dispname}&c for &7{reason}&c.");
         igTempbanFormat = c.getString("bans.temp.messages.ingame_format", "&7{kdispname}&c was tempbanned by &7{dispname}&c for &7{length}&c for &7{reason}&c.");
         igUnbanFormat = c.getString("bans.unban.messages.ingame_format", "&7{kdispname}&9 was unbanned by &7{dispname}&9.");
         ipBanFormat = c.getString("bans.ip.messages.format", "&4IP Banned&r: &7{ip}&r has been banned from this server.");
@@ -283,6 +283,7 @@ public class Config {
         nickPrefix = RUtils.colorize(c.getString("nicknames.prefix", "*"));
         nickRegex = c.getString("nicknames.regex", "[\\w]{2,16}");
         noBuildMessage = RUtils.colorize(c.getString("messages.no_build", "&cYou don't have permission to build!"));
+        tradeHelp = c.getString("trade.help", "<book>\n<title>Oops!</title>\n<author>Mr. Error</author>\n<page>Looks like this is configured wrong!</page>\n</book>");
         returnFormat = c.getString("afk.messages.return_format", "{dispname} is no longer AFK.");
         saveInterval = c.getString("userdata.saving.save_on_interval", "10m");
         teleportSoundName = c.getString("teleports.sound.sound", "ENDERMAN_TELEPORT");

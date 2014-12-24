@@ -34,12 +34,12 @@ public class CmdKick extends BaseCommand {
             return true;
         }
         if (args.length == 1) {
-            this.plugin.getServer().broadcast(RUtils.getInGameMessage(Config.igKickFormat, Config.kickMessage, t, cs), "rcmds.see.kick");
+            this.plugin.getServer().broadcast(RUtils.getInGameMessage(Config.inGameKickFormat, Config.kickMessage, t, cs), "rcmds.see.kick");
             RUtils.kickPlayer(t, cs, Config.kickMessage);
             return true;
         } else if (args.length > 1) {
             String kickMessage = RUtils.colorize(RoyalCommands.getFinalArg(args, 1));
-            this.plugin.getServer().broadcast(RUtils.getInGameMessage(Config.igKickFormat, kickMessage, t, cs), "rcmds.see.kick");
+            this.plugin.getServer().broadcast(RUtils.getInGameMessage(Config.inGameKickFormat, kickMessage, t, cs), "rcmds.see.kick");
             RUtils.kickPlayer(t, cs, kickMessage);
             return true;
         }
