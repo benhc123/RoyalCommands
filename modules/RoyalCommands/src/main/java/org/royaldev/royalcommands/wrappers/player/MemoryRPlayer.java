@@ -139,6 +139,10 @@ public class MemoryRPlayer implements RPlayer {
         return homes;
     }
 
+    public KickManager getKickManager() {
+        return new KickManager(this.getUUID());
+    }
+
     @Override
     public String getName() {
         return this.getOfflinePlayer().getName();

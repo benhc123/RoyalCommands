@@ -22,6 +22,8 @@ public interface RPlayer {
 
     List<Home> getHomes();
 
+    public KickManager getKickManager();
+
     String getName();
 
     OfflinePlayer getOfflinePlayer();
